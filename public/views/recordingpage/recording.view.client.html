@@ -1,0 +1,46 @@
+<div class="container row">
+    <ng-audio-recorder id='audioInput' audio-model='model.recordedInput' on-record-complete="model.recordAndSearch()">
+        <!-- Start controls, exposed via recorder-->
+        <div ng-if="recorder.isAvailable">
+            <button ng-click="recorder.startRecord()" type="button" ng-disabled="recorder.status.isRecording">
+                Start Record
+            </button>
+            <button ng-click="recorder.stopRecord()" type="button" >
+                Stop Record
+            </button>
+        </div>
+
+        <div ng-if="!recorder.isAvailable">
+            Sorry this browser doesnt support recording
+        </div>
+        <!-- End controls-->
+    </ng-audio-recorder>
+    <div class="form-group">
+        <label for="description">Speech to Text</label>
+        <textarea ng-model="model.speechdata" class="form-control" rows="3" id="description" placeholder="Speech to Text"></textarea>
+    </div>
+
+    <form>
+    </form>
+
+    <div>
+        <h3>Scrum Call Results</h3>
+        
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Information</th>
+                <th>Status</th>
+                <th>Difficulties</th>
+            </tr>
+            <tr ng-repeat="x in model.multiStatus">
+                            <td>{{ x.NAME }}</td>
+                            <td>{{ x.TASK }}</td>
+                            <td>{{ x.INFO }}</td>
+                            <td>{{ x.STAT }}</td>
+                            <td>{{ x.DIFF }}</td>
+                        </tr>
+        </table>
+    </div>
+</div>

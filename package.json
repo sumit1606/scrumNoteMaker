@@ -1,0 +1,33 @@
+{
+  "name": "scrumnote",
+  "version": "1.0.0",
+  "description": "Created as a part of IBM hackathon",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "formidable": "^1.1.1",
+    "fs": "0.0.1-security",
+    "media-recorder-js": "^1.0.1",
+    "multer": "^1.3.0",
+    "node.js": "^0.0.0",
+    "watson-developer-cloud": "^2.34.0",
+    "window": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ng.bluemix.net/Partha.Sarathi.Jena/scrumnotemaker"
+  },
+  "keywords": [
+    "scrum",
+    "note",
+    "maker"
+  ],
+  "author": "Sumit Bhanwala",
+  "license": "MIT"
+}

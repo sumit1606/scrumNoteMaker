@@ -1,0 +1,6 @@
+applications:
+- name: scrumnotemaker
+  command: node server.js
+  buildpack: sdk-for-nodejs
+  path: .
+  memory: 256m
